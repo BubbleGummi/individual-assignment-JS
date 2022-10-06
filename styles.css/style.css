@@ -1,124 +1,227 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:ital@1&family=Roboto+Mono:wght@216&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:ital@1&family=Roboto+Mono:wght@216&display=swap");
 :root {
-    --white: #f9f9f9; 
-    --black: #36383F;
-    --gray: #85888C;
+  --white: #f9f9f9;
+  --black: #36383f;
+  --gray: #85888c;
+  --brown: #271a12;
+  --blue: #616769;
 } /*variables*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
-a {
-    text-decoration: none;
-}
-ul {
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .header {
-    background-color: var(--black);
-    box-shadow: 1px 1px 5px 0px var(--gray);
-    position: sticky;
-    width: 100%;
+  background-color: var(--blue);
+  box-shadow: 3px 5px 5px 4px var(--blue);
+  position: sticky;
+  width: 100%;
 }
 .logo {
-    display: inline-block;
-    color: var(--white);
-    font-size: 60px;
-    margin-left: 10px;
-    font-family: "Roboto Mono";
+  display: inline-block;
+  color: var(--white);
+  font-size: 60px;
+  margin-left: 10px;
+  font-family: "Roboto Mono", sans-serif;
 }
 .logo > img {
-    width: 2.7rem;
-    padding-top: 1rem;
+  width: 2.7rem;
+  padding-top: 1rem;
 }
 .navbar {
-    width: 100%;
-    position: fixed;
-    background-color: var(--black);
+  width: 100%;
+  position: fixed;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 .menu a {
-    display: block;
-    padding: 30px;
-    color: var(--white);
+  display: block;
+  padding: 30px;
+  color: var(--white);
+  font-family: "Roboto Mono";
 }
 /*hide the nav elements by default and show when menu icon is clicked*/
 .navbar {
-    max-height: 0;
-    transition: max-height .5s ease-out;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
 }
 /*menu icon*/
 .hamburger-menu {
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
 }
 .hamburger-line {
-    background: var(--white);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
 }
 /*span tag*/
 .hamburger-line::before,
 .hamburger-line::after {
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
+  background: var(--white);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
 }
 .hamburger-line::before {
-    top: 5px;
+  top: 5px;
 }
 .hamburger-line::after {
-    top: -5px;
+  top: -5px;
 }
 .side-menu {
-    display: none;
+  display: none;
 }
 /*toggle menu icon*/
 .side-menu:checked ~ .navbar {
-    max-height: 100%;
+  max-height: 100%;
 }
 .side-menu:checked ~ .hamburger-menu .hamburger-line {
-    background: transparent;
+  background: transparent;
 }
-.side-menu:checked ~ .hamburger-menu .hamburger-line::before{
-    transform: rotate(-45deg);
-    top: 0;
+.side-menu:checked ~ .hamburger-menu .hamburger-line::before {
+  transform: rotate(-45deg);
+  top: 0;
 }
 .side-menu:checked ~ .hamburger-menu .hamburger-line::after {
-    transform: rotate(45deg);
-    top: 0;
+  transform: rotate(45deg);
+  top: 0;
 }
-/*responsive*/ 
+/*responsive*/
 @media (min-width: 600px) {
-    .navbar {
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-    }
-    .menu li {
-        float: left;
-    }
-    .menu a:hover {
-        background-color: transparent;
-        color: var(--gray);
-    }
-    .hamburger-line {
-        display: none;
-    }
+  .navbar {
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+  }
+  .menu li {
+    float: left;
+  }
+  .menu a:hover {
+    background-color: transparent;
+    color: var(--gray);
+  }
+  .hamburger-line {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    overflow: hidden;
+  }
 }
 /*Code for index page*/
-.index__body {
-    background-color: var--(white);
-    font-family: "Roboto Mono", sans-serif;
+.index__container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  height: 100px;
+  grid-template-areas:
+    "index--header index--header index--header index--header index--header index--header index--header"
+    "index--header index--header index--header index--header index--header index--header index--header"
+    "index--aside index--aside index--mid index--mid index--mid index--right index--right"
+    "index--aside index--aside index--mid index--mid index--mid index--right index--right"
+    "index--footer index--footer index--footer index--footer index--footer index--footer index--footer";
+}
+.index--header {
+  grid-area: index--header;
+}
+.index--aside {
+  grid-area: index--aside;
+  background-color: pink;
+}
+.index--mid {
+  grid-area: index--mid;
+  background-color: yellow;
+}
+.index--right {
+  grid-area: index--right;
+  background-color: aqua;
+}
+.index--footer {
+  grid-area: index--footer;
+  background-color: yellowgreen;
 }
 
+.index--header {
+  background-image: url("../images/photos/09-night.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 50rem;
+  width: 100%;
+  padding: 13rem 13rem;
+  display: flex;
+}
+.index__intro {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 1rem;
+  font-family: "Roboto MOno", sans-serif;
+  font-weight: 800;
+}
+.index--header--2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.overlap {
+  background-image: url("../images/logo/bonz.ai-logo-white-portrait.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  height: 25rem;
+  width: 25rem;
+  opacity: 0.7;
+}
+
+.fa {
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+  opacity: 0.8;
+}
+.fa-facebook {
+  color: white;
+}
+.fa-instagram {
+  color: white;
+}
+.fa-snapchat {
+  color: white;
+}
+.fa-twitter {
+  color: white;
+}
+
+@media (max-width:700px){
+    .index__container, 
+    .index--header, 
+    .index--header--2,
+    .index__intro {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
