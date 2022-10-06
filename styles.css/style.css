@@ -1,71 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:ital@1&family=Roboto+Mono:wght@216&display=swap');
 :root {
     --white: #f9f9f9; 
     --black: #36383F;
     --gray: #85888C;
 } /*variables*/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-
-body {
-    background-color: var--(white);
-    font-family: "Poppins", sans-serif;
-}
-
 a {
     text-decoration: none;
 }
-
 ul {
     list-style: none;
 }
-
 .header {
     background-color: var(--black);
     box-shadow: 1px 1px 5px 0px var(--gray);
     position: sticky;
-    top: 0; 
     width: 100%;
 }
-
 .logo {
     display: inline-block;
     color: var(--white);
     font-size: 60px;
     margin-left: 10px;
+    font-family: "Roboto Mono";
 }
-
+.logo > img {
+    width: 2.7rem;
+    padding-top: 1rem;
+}
 .navbar {
     width: 100%;
     position: fixed;
     background-color: var(--black);
-    overflow: hidden;
 }
-
 .menu a {
     display: block;
     padding: 30px;
     color: var(--white);
 }
-
 /*hide the nav elements by default and show when menu icon is clicked*/
 .navbar {
     max-height: 0;
     transition: max-height .5s ease-out;
 }
-
 /*menu icon*/
 .hamburger-menu {
     cursor: pointer;
     float: right;
     padding: 40px 20px
 }
-
 .hamburger-line {
     background: var(--white);
     display: block;
@@ -73,7 +62,6 @@ ul {
     position: relative;
     width: 24px;
 }
-
 /*span tag*/
 .hamburger-line::before,
 .hamburger-line::after {
@@ -85,19 +73,15 @@ ul {
     transition: all .2s ease-out;
     width: 100%;
 }
-
 .hamburger-line::before {
     top: 5px;
 }
-
 .hamburger-line::after {
     top: -5px;
 }
-
 .side-menu {
     display: none;
 }
-
 /*toggle menu icon*/
 .side-menu:checked ~ .navbar {
     max-height: 100%;
@@ -113,9 +97,7 @@ ul {
     transform: rotate(45deg);
     top: 0;
 }
-
 /*responsive*/ 
-
 @media (min-width: 600px) {
     .navbar {
         top: 0;
@@ -130,7 +112,13 @@ ul {
         background-color: transparent;
         color: var(--gray);
     }
-    .hamburger-menu {
+    .hamburger-line {
         display: none;
     }
 }
+/*Code for index page*/
+.index__body {
+    background-color: var--(white);
+    font-family: "Roboto Mono", sans-serif;
+}
+
