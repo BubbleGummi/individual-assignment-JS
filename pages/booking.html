@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,44 @@
     <title>Bonz.ai</title>
     <link rel="stylesheet" href="../styles.css/style.css">
 </head>
+
 <body>
-    <header class="header">
-        <!--logo-->
-        <a href="../pages/index.html" class="logo"><img class="logo" src="../images/logo/bonz.ai-logo-white-symbol.png">Bonz.ai</a>
-        <!--hamburger menu-->
-        <input class="side-menu" type="checkbox" id="side-menu">
-        <label class="hamburger-menu" for="side-menu"><span class="hamburger-line"></span></label>
-        <!--menu-->
-        <nav class="navbar">
-            <ul class="menu">
-                <li><a href="../pages/index.html">Home</a></li>
-                <li><a href="../pages/booking.html">Booking</a></li>
-                <li><a href="../pages/about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
-        <article>
-            <h1>Hello</h1>
-            <p>Even more content</p>
-        </article>
+        <section class="booking__header">
+            <nav class="nav">
+                <a href="../pages/index.html" class="nav__link">HOME</a>
+                <a href="../pages/booking.html" class="nav__link">BOOKING</a>
+                <a href="../pages/about.html" class="nav__link">ABOUT</a>
+                <a href="#" class="nav__link">CONTACT</a>
+            </nav>
+            <section class="index__title">
+                <h1 class="booking__h1">Book your room</h1>
+            </section>  
+        </section>
+                <section class="booking__preview">            <form name="simple" method="post" action="Ass1.php"><br />
+                    <input type="text" id="req1" placeholder="Firstname"><br><br>
+                    <input type="text" id="req3" placeholder="Email address"><br><br>
+                    <br><input type="date" name="bday"><br><br>
+                    <br><input type="date" name="bday"><br><br>
+                    <select id="selection">
+                        <option>How many people</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>more</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form></section>
+        </section>
+        <footer>
+            <address>Jupiters högra kust</address>
+            <address>382 45 Jupiter</address>
+            <address>Email: bonz.ai@bonz.ai</address>
+            <address>Phonenumber: 987 000 22 33</address>
+        </footer>
     </main>
 </body>
+
 </html>

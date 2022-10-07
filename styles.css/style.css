@@ -1,131 +1,290 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:ital@1&family=Roboto+Mono:wght@216&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:wght@500&family=Roboto+Condensed:ital@1&family=Roboto+Mono:wght@216&display=swap');
 
-/* Navbar section */
-#navbarDog {
-  background-color: #F5EFE6;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#logo {
-  height: 100px;
+body {
+  text-align: center;
+  font-size: 22px;
+  color: White;
 }
 
-.nav-link {
-  font-size: 20px;
-  transition: font-size 0.4s;
-}
-
-.nav-link:hover {
-  font-size: 25px;
-}
-
-
-.index__body {
-  background-color: #F5efe6;
-  padding: 1rem;
-}
-
-.index__container {
-  margin: 5rem auto auto auto;
+main {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-areas: 
-  "index__header index__header index__header index__header index__header index__header index__header "
-  "index__box--1 index__box--1 index__mid index__mid index__mid index__aside index__aside"
-  "index__box--2 index__box--2 index__mid index__mid index__mid index__aside index__aside"
-  "index__box--3 index__box--3 index__mid index__mid index__mid index__aside index__aside"
-  "index__box--4 index__box--4 index__mid index__mid index__mid index__aside index__aside"
-  "index__box--5 index__box--5 index__mid index__mid index__mid index__aside index__aside";
+  font-family: "Roboto Mono";
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas:
+    "index__header index__header index__header index__header index__header"
+    "index__header index__header index__header index__header index__header"
+    "index__preview index__preview index__preview index__preview index__preview"
+    "index__preview index__preview index__preview index__preview index__preview"
+    "footer footer footer footer footer";
 }
 
-.index__header {grid-area: index__header;}
-.index__box--1{grid-area: index__box--1;}
-.index__box--2{grid-area: index__box--2;}
-.index__box--3{grid-area: index__box--3;}
-.index__box--4{grid-area: index__box--4;}
-.index__box--5{grid-area: index__box--5;}
-
-button{
-  padding: .2rem;
+.nav {
+  grid-area: nav;
+  height: 5rem;
+  width: 100%;
   background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 15px 15px -15px rgb(0 0 0 / 80%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.index__mid{
-  height: 100%;
-  grid-area: index__mid;
-}
-
-.index__aside {
-  height: 100%;
-  grid-area: index__aside;
+.nav__link {
+  letter-spacing: .4rem;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: black;
 }
 
 .index__header {
+  grid-area: index__header;
+  background-image: url(../images/photos/09-night.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  box-shadow: 0 15px 15px -15px rgb(0 0 0 / 80%);
+  height: 40rem;
+}
+
+.index__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid white;
+  font-size: 50px;
+}
+
+.index__h1 {
+  color: #fff;
+  margin-top: 200px;
   font-family: "Roboto Mono";
 }
 
-.index__image--box {
-  border: 1px solid black;
-  box-shadow: 2px 2px 2px black;
-}
-.index__gallery {
-  width: 80%;
-  overflow: hidden;
-  border: .24rem solid #fff;
-  border-radius: 8px;
-  box-shadow: -1px 5px 15px black;
-}
-
-.index__gallery--wrapper {
+.index__preview {
+  grid-area: index__preview;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  animation: slide 16s infinite;
+  padding: 2rem;
+  box-shadow: 0px 15px 15px -15px rgb(0 0 0 / 80%);
+  background-color: #16181C;
+  color: white;
 }
 
-.index__gallery--img {
+.index__preview--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid black;
+  width: 70%;
+}
+
+.index__img {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
 
-  25% {
-    transform: translateX(0);
-  }
-
-  30% {
-    transform: translateX(-100%);
-  }
-
-  50% {
-    transform: translateX(-100%);
-  }
-
-  55% {
-    transform: translateX(-200%);
-  }
-
-  75% {
-    transform: translateX(-200%);
-  }
-
-  80% {
-    transform: translateX(-300%);
-  }
-
-  100% {
-    transform: translateX(-300%);
-  }
+.index__images {
+  width: 33%;
+  border: 1px solid black;
+  box-shadow: 0 15px 15px -15px rgb(0 0 0 / 80%);
 }
-  
 
+.index__p {
+  padding: 2rem;
+  font-size: 22px;
+}
 
-#footer {
-  padding: 4%;
+footer {
+  grid-area: footer;
+  background-image: url("../images/photos/map-contact.png");
+  color: white;
+  font-size: 23px;
+  padding: 6rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.booking__header {
+  grid-area: index__header;
+  background-image: url(../images/photos/02-night.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  box-shadow: 0 15px 15px -15px rgb(0 0 0 / 80%);
+  height: 40rem;
+}
+
+.booking__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+  font-size: 50px;
+}
+
+.booking__h1 {
+  color: #fff;
+  margin-top: 200px;
+  font-family: "Roboto Mono";
+}
+
+h1 {
+  color: white;
+  font-size: 60px;
+  font-family: cursive;
+}
+
+.form1 {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 24px;
+  margin-top: 0px;
+  width: 28%;
+  position: absolute;
+  left: 34%;
+  border-radius: 15px;
+}
+
+input {
+  width: 330px;
+  height: 30px;
+  border-radius: 7px;
   text-align: center;
+}
+
+input[type="text"] {
+  font-size: 20px;
+}
+
+input[type="email"] {
+  font-size: 20px;
+}
+
+input[type="submit"] {
+  font-size: 20px;
+  height: 40px;
+  background-color: lightsalmon;
+}
+
+input[type="submit"]:hover {
+  color: white;
+  background-color: blue;
+}
+
+select {
+  size: 400px;
+  height: 30px;
+  width: 252px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+input[type="radio"] {
+  font-size: 14px;
+  size: 10px;
+  height: 12px;
+}
+
+.booking__preview {
+  grid-area: index__preview;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0px 15px 15px -15px rgb(0 0 0 / 80%);
+  background-image: url("../images/photos/05-night.jpg");
+  background-position: center;
+  color: white;
+
+}
+
+h1 {
+  color: #16181C;
+  font-family: "Roboto Mono";
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: lightslategray;
+}
+
+.gallery--img {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #16181C;
+  color: #16181C;
+  font-family: "Roboto Mono";
+  font-weight: 800;
+  background-color: white;
+  width: 25.4%;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "index__header"
+      "index__preview"
+      "footer";
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .index__preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .index__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
