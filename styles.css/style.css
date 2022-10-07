@@ -222,28 +222,24 @@ input[type="radio"] {
   color: white;
 
 }
-
 h1 {
   color: #16181C;
   font-family: "Roboto Mono";
 }
-
-.gallery {
+.gallery{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   background-color: lightslategray;
 }
-
-.gallery--img {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #16181C;
-  color: #16181C;
-  font-family: "Roboto Mono";
-  font-weight: 800;
-  background-color: white;
-  width: 25.4%;
+.gallery--img{
+display: flex;
+flex-direction: column;
+border: 2px solid #16181C;
+color: #16181C;
+font-family: "Roboto Mono";
+font-weight: 700;
+width: 50%;
+background-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -274,12 +270,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
 
   footer {
